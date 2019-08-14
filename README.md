@@ -21,7 +21,7 @@ OCR 기술은 크게 text detection(이미지 상에서 글자가 있는 영역�
 3. 원하는 유형에 맞추어 데이터를 생성한다
     - [5개 유형 데이터 생성 bash](/data/generator/TextRecognitionDataGenerator/generate_data_5type.sh)  
     - basic  
-        ![basic1](data/generator/TextRecognitionDataGenerator/out/basic/가스 까맣다 나빠지다 생선 출판 흐르다 비롯되다 인격 자랑스럽다 저렇게_1.jpg)
+        <img src="./data/generator/TextRecognitionDataGenerator/out/basic/가스 까맣다 나빠지다 생선 출판 흐르다 비롯되다 인격 자랑스럽다 저렇게_1.jpg" width="1000" title="basic1">
         ![basic2](data/generator/TextRecognitionDataGenerator/out/basic/국제화 아쉬움 넘치다 뜨다 낡다_1.jpg)
         ![basic3](data/generator/TextRecognitionDataGenerator/out/basic/농민 특성 지우개 철도 전설 벽 향하다 아스팔트 모두 존중하다_0.jpg)
     - skew  
