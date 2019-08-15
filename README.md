@@ -22,25 +22,25 @@ OCR 기술은 크게 text detection(이미지 상에서 글자가 있는 영역�
     - [5개 유형 데이터 생성 bash](/data/generator/TextRecognitionDataGenerator/generate_data_5type.sh)  
     - basic  
         <img src="./data/generator/TextRecognitionDataGenerator/out/basic/가스 까맣다 나빠지다 생선 출판 흐르다 비롯되다 인격 자랑스럽다 저렇게_1.jpg" width="1000" title="basic1">
-        ![basic2](data/generator/TextRecognitionDataGenerator/out/basic/국제화 아쉬움 넘치다 뜨다 낡다_1.jpg)
-        ![basic3](data/generator/TextRecognitionDataGenerator/out/basic/농민 특성 지우개 철도 전설 벽 향하다 아스팔트 모두 존중하다_0.jpg)
+        <img src="./data/generator/TextRecognitionDataGenerator/out/basic/국제화 아쉬움 넘치다 뜨다 낡다_1.jpg" width="1000" title="basic2">
+        <img src="./data/generator/TextRecognitionDataGenerator/out/basic/농민 특성 지우개 철도 전설 벽 향하다 아스팔트 모두 존중하다_0.jpg" width="1000" title="basic3">
     - skew  
-        ![skew1](data/generator/TextRecognitionDataGenerator/out/skew/싶어지다 담배 들여다보다 외치다 달다_1.jpg)
-        ![skew2](data/generator/TextRecognitionDataGenerator/out/skew/장모 무리하다 항상 목적 높아지다_2.jpg)
-        ![skew3](data/generator/TextRecognitionDataGenerator/out/skew/커튼 실시 사계절 접근하다 듣다_0.jpg)
+        <img src="./data/generator/TextRecognitionDataGenerator/out/skew/싶어지다 담배 들여다보다 외치다 달다_1.jpg" width="1000" title="skew1">
+        <img src="./data/generator/TextRecognitionDataGenerator/out/skew/장모 무리하다 항상 목적 높아지다_2.jpg" width="1000" title="skew2">
+        <img src="./data/generator/TextRecognitionDataGenerator/out/skew/커튼 실시 사계절 접근하다 듣다_0.jpg" width="1000" title="skew3">        
     - distortion  
-        ![dist1](data/generator/TextRecognitionDataGenerator/out/dist/그리 물 태권도 덜 지급_2.jpg)
-        ![dist2](data/generator/TextRecognitionDataGenerator/out/dist/남대문 시대적 먹이 놀이 석_2.jpg)
-        ![dist3](data/generator/TextRecognitionDataGenerator/out/dist/인사 밤중 자극 쥐 마음씨_2.jpg) 
+        <img src="./data/generator/TextRecognitionDataGenerator/out/dist/그리 물 태권도 덜 지급_2.jpg" width="1000" title="dist1">
+        <img src="./data/generator/TextRecognitionDataGenerator/out/dist/남대문 시대적 먹이 놀이 석_2.jpg" width="1000" title="dist2">
+        <img src="./data/generator/TextRecognitionDataGenerator/out/dist/인사 밤중 자극 쥐 마음씨_2.jpg" width="1000" title="dist3">
     - blurring  
-        ![blur1](data/generator/TextRecognitionDataGenerator/out/blur/결정 안심하다 한복 재산 감상_1.jpg) 
-        ![blur2](data/generator/TextRecognitionDataGenerator/out/blur/민주주의 열정 시중 백두산 앨범_4.jpg) 
-        ![blur3](data/generator/TextRecognitionDataGenerator/out/blur/집단 원피스 현지 갈비탕 교환하다_3.jpg) 
+        <img src="./data/generator/TextRecognitionDataGenerator/out/blur/결정 안심하다 한복 재산 감상_1.jpg" width="1000" title="blur1">
+        <img src="./data/generator/TextRecognitionDataGenerator/out/blur/민주주의 열정 시중 백두산 앨범_4.jpg" width="1000" title="blur2">
+        <img src="./data/generator/TextRecognitionDataGenerator/out/blur/집단 원피스 현지 갈비탕 교환하다_3.jpg" width="1000" title="blur3">
     - background  
-        ![back1](data/generator/TextRecognitionDataGenerator/out/back/가능 즐겁다 너머 최선 기타_1.jpg) 
-        ![back2](data/generator/TextRecognitionDataGenerator/out/back/결혼 연세 전개되다 찌다 싸움_0.jpg) 
-        ![back1](data/generator/TextRecognitionDataGenerator/out/back/곁 호주 꾸미다 너무 산부인과_0.jpg)  
-
+        <img src="./data/generator/TextRecognitionDataGenerator/out/back/가능 즐겁다 너머 최선 기타_1.jpg" width="1000" title="back1">
+        <img src="./data/generator/TextRecognitionDataGenerator/out/back/결혼 연세 전개되다 찌다 싸움_0.jpg" width="1000" title="back2">
+        <img src="./data/generator/TextRecognitionDataGenerator/out/back/곁 호주 꾸미다 너무 산부인과_0.jpg" width="1000" title="back3">
+      
 ### create lmdb dataset
 `python3 create_lmdb_dataset.py --inputPath data/ --gtFile data/gt.txt --outputPath result/`
          
