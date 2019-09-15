@@ -38,7 +38,7 @@
         <img src="./data/generator/TextRecognitionDataGenerator/out/back/곁 호주 꾸미다 너무 산부인과_0.jpg" width="1000" title="back3">
       
 ### create lmdb dataset
-`python3 create_lmdb_dataset.py --inputPath data/ --gtFile data/gt.txt --outputPath result/`
+`python3  data/create_lmdb_dataset.py --inputPath data/generator/TextRecognitionDataGenerator/ --gtFile data/gt_basic.txt --outputPath deep-text-recognition-benchmark/data_lmdb_release/training`
          
 
    
