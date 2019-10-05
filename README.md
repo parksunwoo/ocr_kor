@@ -40,8 +40,9 @@
       
 ### create lmdb dataset
 ```shell
-$ python3 data/create_lmdb_dataset.py --inputPath data/generator/TextRecognitionDataGenerator/ --gtFile data/gt_basic.txt \
-  --outputPath deep-text-recognition-benchmark/data_lmdb_release/training`
+$ python3 data/create_lmdb_dataset.py --inputPath data/generator/TextRecognitionDataGenerator/ \ 
+                        --gtFile data/gt_basic.txt \
+                        --outputPath deep-text-recognition-benchmark/data_lmdb_release/training;
 ```
   
 ### train / test 
@@ -56,22 +57,21 @@ $ CUDA_VISIBLE_DEVICES=0 python3 train.py --train_data data/data_lmdb_release/tr
                                           --Prediction Attn 
                                           --data_filtering_off 
                                           --batch_max_length 50 
-                                          --workers 4
+                                          --workers 4 ;
 
 $ CUDA_VISIBLE_DEVICES=0 python3 test.py --eval_data data/data_lmdb_release/evaluation 
-                                        --benchmark_all_eval \
-                                        --Transformation TPS \
-                                        --FeatureExtraction VGG \ 
-                                        --SequenceModeling None \
-                                        --Prediction Attn \
-                                        --saved_model saved_models/TPS-VGG-None-Attn-Seed1111/best_accuracy.pth \
-                                        --data_filtering_off \
-                                        --workers 4 | tee -a test.txt
+                        --benchmark_all_eval \
+                        --Transformation TPS \
+                        --FeatureExtraction VGG \ 
+                        --SequenceModeling None \
+                        --Prediction Attn \
+                        --saved_model saved_models/TPS-VGG-None-Attn-Seed1111/best_accuracy.pth \
+                        --data_filtering_off \
+                        --workers 4 ;
 ```
 
 ### exprements results
-
-v1  
+ 
 | ##### | 변환      | 추출      | 시퀀스     | 예측      | 정확도%    | 시간ms    | 파라미터*10^6| 
 | ----- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | 
 | T1    | None     | RCNN     | None     | CTC      | 0.19     | 0.27     | 2.35     | 
