@@ -48,18 +48,20 @@ $ python3 data/create_lmdb_dataset.py --inputPath data/generator/TextRecognition
 ### train / test 
 ex) TPS-VGG-None-Attn  
 ```shell
-$ CUDA_VISIBLE_DEVICES=0 python3 train.py --train_data data/data_lmdb_release/training \
+$ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/train.py \ 
+                                          --train_data data/data_lmdb_release/training \
                                           --valid_data data/data_lmdb_release/validation \
                                           --select_data basic-skew --batch_ratio 0.5-0.5 \
-                                          --Transformation TPS 
-                                          --FeatureExtraction VGG 
-                                          --SequenceModeling None 
-                                          --Prediction Attn 
-                                          --data_filtering_off 
-                                          --batch_max_length 50 
-                                          --workers 4 ;
+                                          --Transformation TPS \
+                                          --FeatureExtraction VGG \
+                                          --SequenceModeling None \
+                                          --Prediction Attn \
+                                          --data_filtering_off \ 
+                                          --batch_max_length 50 \
+                                          --workers 4;
 
-$ CUDA_VISIBLE_DEVICES=0 python3 test.py --eval_data data/data_lmdb_release/evaluation 
+$ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/test.py \
+                        --eval_data data/data_lmdb_release/evaluation \ 
                         --benchmark_all_eval \
                         --Transformation TPS \
                         --FeatureExtraction VGG \ 
@@ -67,7 +69,7 @@ $ CUDA_VISIBLE_DEVICES=0 python3 test.py --eval_data data/data_lmdb_release/eval
                         --Prediction Attn \
                         --saved_model saved_models/TPS-VGG-None-Attn-Seed1111/best_accuracy.pth \
                         --data_filtering_off \
-                        --workers 4 ;
+                        --workers 4;
 ```
 
 ### exprements results
