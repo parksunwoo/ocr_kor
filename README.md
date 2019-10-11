@@ -90,7 +90,8 @@ $ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/test.py \
 | T4    | TPS      | VGG      | BiLSTM   | Attn     | 88.24    | 2.95     | 12.04    |
 | T5    | TPS      | ResNet   | BiLSTM   | Attn     | 87.43    | 6.84     | 50.75    |
 
-
+### download models (best accuracy)
+[TPS-VGG-BiLSTM-Attn](https://drive.google.com/open?id=12gyTwu5tM_9MthsXI9Ja2yCOXpvDEIao)
 
 
 
