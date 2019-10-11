@@ -74,7 +74,7 @@ $ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/test.py \
 
 ### exprements results
  
-| ##### | 변환      | 추출      | 시퀀스     | 예측      | 정확도%    | 시간ms    | 파라미터*10^6| 
+| v1    | 변환      | 추출      | 시퀀스     | 예측      | 정확도%    | 시간ms    | 파라미터*10^6| 
 | ----- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | 
 | T1    | None     | RCNN     | None     | CTC      | 0.19     | 0.27     | 2.35     | 
 | T2    | TPS      | RCNN     | None     | CTC      | 10.3     | 0.40     | 4.05     | 
@@ -82,6 +82,13 @@ $ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/test.py \
 | T4    | TPS      | ResNet   | BiLSTM   | Attn     | 29.28    | 1.69     | 50.75    |
 | T5    | TPS      | VGG      | BiLSTM   | Attn     | 29.34    | 3.68     | 12.04    |
 
+| v2    | 변환      | 추출      | 시퀀스     | 예측      | 정확도%    | 시간ms    | 파라미터*10^6| 
+| ----- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | 
+| T1    | None     | VGG      | None     | CTC      | 62.72    | 1.27     | 6.04     | 
+| T2    | None     | VGG      | BiLSTM   | CTC      | 65.91    | 1.31     | 8.69     | 
+| T3    | TPS      | VGG      | BiLSTM   | CTC      | 87.79    | 1.79     | 10.38    |
+| T4    | TPS      | VGG      | BiLSTM   | Attn     | 88.24    | 2.95     | 12.04    |
+| T5    | TPS      | ResNet   | BiLSTM   | Attn     | 87.43    | 6.84     | 50.75    |
 
 
 
