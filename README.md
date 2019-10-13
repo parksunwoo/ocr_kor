@@ -1,14 +1,16 @@
 # 딥러닝을 활용한 한글문서 OCR 연구
+| [paper](/HCLT2019_deeplearningOCR.pdf) | [poster](/Poster_HCLT2019_deeplearningOCR.pdf)
 
 ## Introduction
 한글에 대한 OCR 연구는 공식 데이터가 없고 딥러닝을 사용한 시도가 많지 않았다. 본 논문은 폰트와 사전데이터를 사용해 딥러닝 모델 학습을 위한 한글 문장 이미지 데이터를 직접 생성해보고 이를 활용해서 한글 문장의 OCR 성능을 높일 다양한 모델 조합들에 대한 실험을 진행했다. 딥러닝을 활용한 OCR 실험 결과 문자 영역을 찾는 부분보다 문자인식 부분에서 개선할 부분이 있음을 찾고 다양한 모델조합의 성능을 비교하였다. 한글은 영문과 비교해 분류해야 할 글자 수가 많아 정확도를 높이기가 어렵고 기존 한글 OCR 연구 또한 글자 단위, 단일모델로만 진행되어 실제 서비스에 적용하기에 한계를 보였다. 반면 해당 논문에서는 OCR의 범위를 문장 단위로 확장하였고 실제 문서 이미지에서 자주 발견되는 유형의 데이터를 사용해 애플리케이션 적용 가능성을 높이고자 한 부분에 의의가 있다.
 
 ## Updates
 2019-08-11 훈련 및 검증 데이터셋 생성과정 설명추가  
-2019-10-05 모델훈련 및 1차실험결과 추가 
+2019-10-05 모델훈련 및 1차실험결과 추가
+2019-10-13 논문 및 포스터, 모델파일 추가  
 
 ## Getting started
-### generate train/ validation data
+### Generate train/ validation data
 
 1. fonts/ko 에 폰트를 추가한다 .ttf만 가능
     - [네이버 나눔글꼴](https://hangeul.naver.com/2017/nanum)(23종) 
@@ -38,14 +40,14 @@
         <img src="./data/generator/TextRecognitionDataGenerator/out/back/결혼 연세 전개되다 찌다 싸움_0.jpg" width="1000" title="back2">
         <img src="./data/generator/TextRecognitionDataGenerator/out/back/곁 호주 꾸미다 너무 산부인과_0.jpg" width="1000" title="back3">
       
-### create lmdb dataset
+### Create lmdb dataset
 ```shell
 $ python3 data/create_lmdb_dataset.py --inputPath data/generator/TextRecognitionDataGenerator/ \ 
                         --gtFile data/gt_basic.txt \
                         --outputPath deep-text-recognition-benchmark/data_lmdb_release/training;
 ```
   
-### train / test 
+### Train / Test 
 ex) TPS-VGG-None-Attn  
 ```shell
 $ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/train.py \ 
@@ -72,7 +74,7 @@ $ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/test.py \
                         --workers 4;
 ```
 
-### exprements results
+### Exprements results
  
 | v1    | 변환      | 추출      | 시퀀스     | 예측      | 정확도%    | 시간ms    | 파라미터*10^6| 
 | ----- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | 
@@ -90,14 +92,11 @@ $ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/test.py \
 | T4    | TPS      | VGG      | BiLSTM   | Attn     | 88.24    | 2.95     | 12.04    |
 | T5    | TPS      | ResNet   | BiLSTM   | Attn     | 87.43    | 6.84     | 50.75    |
 
-### download models (best accuracy)
-[TPS-VGG-BiLSTM-Attn](https://drive.google.com/open?id=12gyTwu5tM_9MthsXI9Ja2yCOXpvDEIao)
+### Download models (best accuracy)
+[TPS-VGG-BiLSTM-Attn](https://drive.google.com/open?id=12gyTwu5tM_9MthsXI9Ja2yCOXpvDEIao)  
 
-
-
-
-
-
+### Acknowledgements
+[deep-text-recognition-benchmark](https://github.com/clovaai/deep-text-recognition-benchmark), [TextRecognitionDataGenerator](https://github.com/Belval/TextRecognitionDataGenerator)
 
 
 
