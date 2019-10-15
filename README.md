@@ -6,8 +6,9 @@
 
 ## Updates
 2019-08-11 훈련 및 검증 데이터셋 생성과정 설명추가  
-2019-10-05 모델훈련 및 1차실험결과 추가
+2019-10-05 모델훈련 및 1차실험결과 추가  
 2019-10-13 논문 및 포스터, 모델파일 추가  
+2019-10-15 데모 스크립트 및 파일정리    
 
 ## Getting started
 ### Generate train/ validation data
@@ -72,6 +73,14 @@ $ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/test.py \
                         --saved_model saved_models/TPS-VGG-None-Attn-Seed1111/best_accuracy.pth \
                         --data_filtering_off \
                         --workers 4;
+```
+
+### Demo
+```shell script
+$ CUDA_VISIBLE_DEVICES=0 python3 deep-text-recognition-benchmark/demo.py \
+                        --Transformation TPS --FeatureExtraction VGG --SequenceModeling BiLSTM --Prediction Attn \
+                        --image_folder data/demo_image/ \
+                        --saved_model deep-text-recognition-benchmark/saved_models/TPS-VGG-BiLSTM-Attn-Seed9998/best_accuracy.pth;        
 ```
 
 ### Exprements results
