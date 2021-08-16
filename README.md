@@ -9,13 +9,14 @@
 2019-10-05 모델훈련 및 1차실험결과 추가  
 2019-10-13 논문 및 포스터, 모델파일 추가  
 2019-10-15 데모 스크립트 및 파일정리    
+2021-08-16 requirements.txt, 폰트파일 추가 및 minor fix
 
 ## Getting started
 ### Generate train/ validation data
 
 1. fonts/ko 에 폰트를 추가한다 .ttf만 가능
     - [네이버 나눔글꼴](https://hangeul.naver.com/2017/nanum)(23종) 
-    - [폰트코리아](http://www.font.co.kr/yoonfont/free/main.asp)(76종)  
+    - [네이버 나눔손글씨](https://clova.ai/handwriting/list.html)(109종)  
 2. dicts 에 한글 단어사전을 추가한다
     - [국립국어원 한국어 학습용 어휘목록](https://www.korean.go.kr/)  
 3. 원하는 유형에 맞추어 데이터를 생성한다
@@ -45,7 +46,7 @@
 ```shell
 $ python3 data/create_lmdb_dataset.py --inputPath data/generator/TextRecognitionDataGenerator/ \ 
                         --gtFile data/gt_basic.txt \
-                        --outputPath deep-text-recognition-benchmark/data_lmdb_release/training;
+                        --outputPath data/data_lmdb_release/training;
 ```
   
 ### Train / Test 
