@@ -45,7 +45,7 @@
 4. 생성된 데이터에 맞는 gt 파일을 생성한다
 ```shell
 $ cd data
-$ ./create_gt_file.sh basic
+$ ./create_gt_file.sh basic | tee -a gt_basic.txt
 ```    
 
 ### Create lmdb dataset
