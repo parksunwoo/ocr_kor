@@ -41,7 +41,13 @@
         <img src="./data/generator/TextRecognitionDataGenerator/out/back/가능 즐겁다 너머 최선 기타_1.jpg" width="1000" title="back1">
         <img src="./data/generator/TextRecognitionDataGenerator/out/back/결혼 연세 전개되다 찌다 싸움_0.jpg" width="1000" title="back2">
         <img src="./data/generator/TextRecognitionDataGenerator/out/back/곁 호주 꾸미다 너무 산부인과_0.jpg" width="1000" title="back3">
-      
+
+4. 생성된 데이터에 맞는 gt 파일을 생성한다
+```shell
+$ cd data
+$ ./create_gt_file.sh basic
+```    
+
 ### Create lmdb dataset
 ```shell
 $ python3 data/create_lmdb_dataset.py --inputPath data/generator/TextRecognitionDataGenerator/ \ 
