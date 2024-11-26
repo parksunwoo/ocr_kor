@@ -1,4 +1,4 @@
-# 딥러닝을 활용한 한글문서 OCR 연구
+# 딥러닝을 활용한 한글문서 OCR 연구 - test
 | [paper](document/HCLT2019_deeplearningOCR.pdf) | [poster](document/Poster_HCLT2019_deeplearningOCR.pdf)
 
 ## Introduction
